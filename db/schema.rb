@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_22_040527) do
+ActiveRecord::Schema.define(version: 2021_07_29_073530) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,18 @@ ActiveRecord::Schema.define(version: 2021_07_22_040527) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "acceptable", default: 0
+    t.string "marker_icon"
+    t.string "image"
+    t.integer "maximum_acceptability"
   end
 
+  create_table "tags", force: :cascade do |t|
+    t.string "tag"
+    t.bigint "host_details_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["host_details_id"], name: "index_tags_on_host_details_id"
+  end
+
+  add_foreign_key "tags", "host_details", column: "host_details_id"
 end

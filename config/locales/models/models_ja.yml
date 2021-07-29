@@ -1,0 +1,32 @@
+ja:
+  activerecord:
+    models:
+      # user: ユーザー
+      hostDetail: 受入店詳細
+      # tag: タグ
+
+    attributes:
+        # user:
+        #   id: ID
+        #   name: 名前
+        #   email: メールアドレス
+        #   password: パスワード
+        #   created_at: 作成日
+        #   updated_at: 更新日
+          
+        hostDetail:
+          name: 店舗名
+          acceptable_date: 受入可能日時
+          rate: 必要通貨数
+          description: 説明
+          link: 受入店リンク
+          address: 住所
+          latitude: 緯度
+          longitude: 経度
+          marker_icon: マーカーアイコン
+          image: 店舗画像
+          maximum_acceptability: 最大受入人数
+          acceptable: 受入可否
+
+        # tag:
+        #   tag: タグ
