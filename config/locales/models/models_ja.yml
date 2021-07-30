@@ -3,7 +3,7 @@ ja:
     models:
       # user: ユーザー
       hostDetail: 受入店詳細
-      # tag: タグ
+      tag: タグ
 
     attributes:
         # user:
@@ -28,5 +28,5 @@ ja:
           maximum_acceptability: 最大受入人数
           acceptable: 受入可否
 
-        # tag:
-        #   tag: タグ
+        tag:
+          tag: タグ

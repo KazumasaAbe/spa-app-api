@@ -12,6 +12,7 @@ class Api::V1::HostDetailsController < ApplicationController
 
   def create
     @host_detail = HostDetail.new(create_host_detail)
+    @host_detail.tags.build
     if @host_detail.save
       render json: { status: 200 }
     else 
@@ -37,12 +38,16 @@ class Api::V1::HostDetailsController < ApplicationController
       params[:host_detail].permit(:name,
                                   :latitude,
                                   :longitude,
-                                  :acceptable_date,
                                   :rate,
                                   :description,
                                   :link,
-                                  :address
-                                  )
+                                  :address,
+                                  :marker_icon,
+                                  :image,
+                                  :maximum_acceptability,
+                                  tags_attributes: [
+                                    :tag
+                                  ])
     end
 
     def set_host_detail
