@@ -1,3 +1,3 @@
 class Tag < ApplicationRecord
-  belongs_to :hostDetail
+  belongs_to :host_detail
 end
