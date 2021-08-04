@@ -56,24 +56,30 @@ HostDetail.create!(name: "遠野醸造TAPROOM",
   ]
 )
 
-HostDetail.create!(name: "遠野旅の産地直売所",
-  latitude: "39.33159282407645",
-  longitude: "141.53075750707873",
+HostDetail.create!(name: "しゃむねこ亭",
+  latitude: "39.32082344250657",
+  longitude: "141.44578785373437",
   acceptable_date: "",
   rate: "",
-  description: "",
-  link: "",
-  address: "",
+  description: "気になっていたあのお店！行列ができる、予約がとれない・・・そこでお弁当！",
+  link: "https://tono-yamasatonet.com/tabisite/service04/%e5%9c%b0%e5%85%83%e3%82%92%e6%a5%bd%e3%81%97%e3%82%82%e3%81%a3%ef%bc%81%e3%81%97%e3%82%83%e3%82%80%e3%81%ad%e3%81%93%e5%bc%81%e5%bd%93/",
+  address: "〒028-0533 岩手県遠野市綾織町上綾織１８地割１６",
   acceptable: 0,
-  marker_icon: "",
-  image: "",
+  marker_icon: "https://tono-yamasatonet.com/tabisite/wp-content/uploads/2021/06/CIMG1099.jpg",
+  image: "https://tono-yamasatonet.com/tabisite/wp-content/uploads/2019/12/yado04_2.jpg",
   maximum_acceptability: "",
   tags_attributes: [
     {
-      tag: ""
+      tag: "お弁当"
     },
     {
-      tag: ""
+      tag: "カフェ"
+    },
+    {
+      tag: "さとぶら"
+    },
+    {
+      tag: "ランチ"
     }
   ]
 )
