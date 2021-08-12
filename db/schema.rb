@@ -24,7 +24,6 @@ ActiveRecord::Schema.define(version: 2021_08_05_142816) do
     t.string "address"
     t.decimal "latitude", precision: 10, scale: 6, null: false
     t.decimal "longitude", precision: 10, scale: 6, null: false
-    t.string "tags"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "acceptable", default: 0
