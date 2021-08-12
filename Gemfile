@@ -31,6 +31,7 @@ gem 'bcrypt', '~> 3.1', '>= 3.1.12'
 gem 'rails-i18n', '~> 6.0.0'
 
 gem 'devise'
+gem 'devise_token_auth'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
 

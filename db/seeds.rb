@@ -127,3 +127,4 @@ HostDetail.create!(name: "遠野醸造TAPROOM",
     }
   ]
 )
+User.create(email: 'admin@example.com',   password: 'password')
