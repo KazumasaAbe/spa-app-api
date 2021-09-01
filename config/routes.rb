@@ -3,7 +3,11 @@ Rails.application.routes.draw do
 
   namespace :api, format: 'json' do
     namespace :v1 do
-      resources :host_details
+      resources :host_details do
+        member do
+          patch 'update_acceptable'
+        end
+      end
     end
   end
   

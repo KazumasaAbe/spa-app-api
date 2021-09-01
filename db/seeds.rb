@@ -865,4 +865,6 @@ HostDetail.create!(
     h31
   ]
 )
-User.create(email: 'admin@example.com',   password: 'password')
+User.create(email: 'admin@example.com',
+            password: 'password',
+            admin: true)
