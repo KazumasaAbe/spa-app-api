@@ -32,6 +32,15 @@ class Api::V1::HostDetailsController < ApplicationController
     render json: { status: 200 }
   end
 
+  def update_acceptable
+    @host_detail = HostDetail.find_by(id: params[:id])
+    if @host_detail.update(acceptable_params)
+      render json: {status: 200}
+    else
+      render json: @host_detail.errors, status: :unprocessable_entity
+    end
+  end
+
   private
     def create_host_detail
       params.permit(:name,
@@ -44,6 +53,10 @@ class Api::V1::HostDetailsController < ApplicationController
                     :marker_icon,
                     :image,
                     :maximum_acceptability)
+    end
+
+    def acceptable_params
+      params.permit(:acceptable)
     end
 
     def set_host_detail
