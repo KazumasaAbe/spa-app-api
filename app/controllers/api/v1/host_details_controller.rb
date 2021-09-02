@@ -2,8 +2,9 @@ class Api::V1::HostDetailsController < ApplicationController
   before_action :set_host_detail, only: [:show, :update, :destroy]
 
   def index
-    @host_details = HostDetail.all
-    render json: @host_details
+    host_details = HostDetail.includes(:tags)
+    host_details_tags = host_details.map.to_json(include: :tags)
+    render json: host_details_tags
   end
 
   def show
@@ -11,16 +12,16 @@ class Api::V1::HostDetailsController < ApplicationController
   end
 
   def create
-    @host_detail = HostDetail.new(create_host_detail)
+    @host_detail = HostDetail.new(host_detail_params)
     if @host_detail.save
       render json: { status: 200 }
-    else 
+    else
       render json: @host_detail.errors, status: :unprocessable_entity
     end
   end
 
   def update
-    if @host_detail.update(create_host_detail)
+    if @host_detail.update(host_detail_params)
       render json: { status: 200 }
     else
       render json: @host_detail.errors, status: :unprocessable_entity
@@ -42,7 +43,12 @@ class Api::V1::HostDetailsController < ApplicationController
   end
 
   private
-    def create_host_detail
+
+    def set_host_detail
+      @host_detail = HostDetail.find_by(id: params[:id])
+    end
+
+    def host_detail_params
       params.permit(:name,
                     :latitude,
                     :longitude,
@@ -52,7 +58,13 @@ class Api::V1::HostDetailsController < ApplicationController
                     :address,
                     :marker_icon,
                     :image,
-                    :maximum_acceptability)
+                    :maximum_acceptability,
+                    tags: [
+                      :id,
+                      :tag,
+                      :host_detail_id
+                    ]
+                  )
     end
 
     def acceptable_params
