@@ -2,7 +2,10 @@ class Api::V1::HostDetailsController < ApplicationController
   before_action :set_host_detail, only: [:show, :update, :destroy]
 
   def index
-    @host_details = HostDetail.all
+    @host_details = HostDetail.all #.includes(:tags)
+    #@host_detail = HostDetail.find(3)
+    #@tags = @host_detail.tags
+    #render :formats => :json and return
     render json: @host_details
   end
 
