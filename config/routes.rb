@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       resources :host_details do
         member do
           patch 'update_acceptable'
+          resources :tags, only: [:create]
         end
       end
     end
