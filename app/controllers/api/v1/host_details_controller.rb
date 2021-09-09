@@ -28,6 +28,7 @@ class Api::V1::HostDetailsController < ApplicationController
     end
   end
 
+
   def destroy
     @host_detail.destroy
     render json: { status: 200 }
@@ -58,12 +59,7 @@ class Api::V1::HostDetailsController < ApplicationController
                     :address,
                     :marker_icon,
                     :image,
-                    :maximum_acceptability,
-                    tags: [
-                      :id,
-                      :tag,
-                      :host_detail_id
-                    ]
+                    :maximum_acceptability
                   )
     end
 
