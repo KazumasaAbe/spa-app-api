@@ -1,11 +1,18 @@
 Rails.application.routes.draw do
   devise_for :users
 
+  namespace :api do
+    namespace :v1 do
+      resources :users, only: [:index, :show]
+    end
+  end
+
   namespace :api, format: 'json' do
     namespace :v1 do
       resources :host_details do
         member do
           patch 'update_acceptable'
+          resources :tags, only: [:create]
         end
       end
     end
