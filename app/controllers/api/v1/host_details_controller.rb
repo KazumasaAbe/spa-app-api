@@ -37,6 +37,7 @@ class Api::V1::HostDetailsController < ApplicationController
     end
   end
 
+
   def destroy
     @host_detail.destroy
     render json: { status: 200 }
@@ -68,14 +69,6 @@ class Api::V1::HostDetailsController < ApplicationController
                     :marker_icon,
                     :image,
                     :maximum_acceptability
-                  )
-    end
-
-    def host_detail_tag_params
-      params.permit(tags: [
-                      :id,
-                      :tag
-                    ]
                   )
     end
 

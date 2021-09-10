@@ -30,6 +30,8 @@ gem 'bcrypt', '~> 3.1', '>= 3.1.12'
 
 gem 'rails-i18n', '~> 6.0.0'
 
+gem 'jbuilder'
+
 gem 'devise'
 gem 'devise_token_auth'
 gem 'devise-i18n',        '1.9.4'
@@ -47,6 +49,7 @@ gem 'mini_magick'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry-rails'
   gem 'pry-byebug', '~> 3.9'
 end
 
