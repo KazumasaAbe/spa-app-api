@@ -877,7 +877,8 @@ User.create(email: 'admin@example.com',
                 password: password,
                 password_confirmation: password,
                 host: true,
-                host_name: host_name)
+                host_name: host_name,
+                host_id: 1)
 end
             
 30.times do |n|
