@@ -21,15 +21,6 @@ class Api::V1::HostDetailsController < ApplicationController
   end
 
   def update
-    host_detail_tag_params[:tags].each do |item|
-      if item[:id].present?
-        host_detail_tag = Tag.find(item[:id])
-        host_detail_tag.update(item)
-      else
-        host_detail_tag = @host_detail.tags.new(tag: host_detail_tag_params[:tags][:tag])
-        host_detail_tag.save
-      end
-    end
     if @host_detail.update(host_detail_params)
       render json: { status: 200 }
     else
