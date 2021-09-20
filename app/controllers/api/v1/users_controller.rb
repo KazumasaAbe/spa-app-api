@@ -1,5 +1,5 @@
 class Api::V1::UsersController < ApplicationController
-  before_action :set_user, only: [:update, :show]
+  before_action :set_user, only: [:update, :show, :destroy]
 
 
   def index
@@ -8,6 +8,7 @@ class Api::V1::UsersController < ApplicationController
   end
   
   def show
+    render json: @user
   end
 
   def update
@@ -18,7 +19,9 @@ class Api::V1::UsersController < ApplicationController
     end
   end
 
-  def destory
+  def destroy
+    @user.destroy
+    render json: {statsu: 200}
   end
 
 
