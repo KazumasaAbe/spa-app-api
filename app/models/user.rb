@@ -7,4 +7,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :validatable
   include DeviseTokenAuth::Concerns::User
   validates :email, uniqueness: true
+  has_one :local_currency
+  has_many :sales
 end
