@@ -7,5 +7,6 @@ class ApplicationController < ActionController::API
 
         def configure_permitted_pareameters
                 devise_parameter_sanitizer.permit(:sign_up, keys: [:host, :host_name, :host_id])
+                devise_parameter_sanitizer.permit(:account_update, keys: [:host_name, :host_id])
         end
 end

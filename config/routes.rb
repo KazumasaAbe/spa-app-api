@@ -3,12 +3,13 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :users, only: [:index, :show]
+      resources :users, only: [:index, :show, :update, :destroy]
     end
   end
 
   namespace :api, format: 'json' do
     namespace :v1 do
+      resources :tags, only: [:index]
       resources :host_details do
         member do
           patch 'update_acceptable'
