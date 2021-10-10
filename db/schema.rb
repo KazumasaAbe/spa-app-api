@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_27_151523) do
+ActiveRecord::Schema.define(version: 2021_09_15_075258) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,12 +32,37 @@ ActiveRecord::Schema.define(version: 2021_08_27_151523) do
     t.integer "maximum_acceptability"
   end
 
+  create_table "local_currencies", force: :cascade do |t|
+    t.integer "quantity"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_local_currencies_on_user_id"
+  end
+
+  create_table "sales", force: :cascade do |t|
+    t.integer "amount"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_sales_on_user_id"
+  end
+
   create_table "tags", force: :cascade do |t|
     t.string "tag"
     t.bigint "host_detail_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["host_detail_id"], name: "index_tags_on_host_detail_id"
+  end
+
+  create_table "transactions", force: :cascade do |t|
+    t.bigint "local_currency_id", null: false
+    t.bigint "sale_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["local_currency_id"], name: "index_transactions_on_local_currency_id"
+    t.index ["sale_id"], name: "index_transactions_on_sale_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -74,5 +99,9 @@ ActiveRecord::Schema.define(version: 2021_08_27_151523) do
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
   end
 
+  add_foreign_key "local_currencies", "users"
+  add_foreign_key "sales", "users"
   add_foreign_key "tags", "host_details"
+  add_foreign_key "transactions", "local_currencies"
+  add_foreign_key "transactions", "sales"
 end
