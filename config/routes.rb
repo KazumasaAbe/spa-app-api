@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   namespace :api, format: 'json' do
     namespace :v1 do
+      resources :tags, only: [:index]
       resources :host_details do
         member do
           patch 'update_acceptable'

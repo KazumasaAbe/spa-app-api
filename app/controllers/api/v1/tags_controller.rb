@@ -2,6 +2,12 @@ class Api::V1::TagsController < ApplicationController
   before_action :set_tags, only: [:create]
   before_action :reset_tags, only: [:create]
 
+  def index
+    @tags = Tag.all
+    @select_tags = Tag.select(:tag).distinct
+    render :formats => :json and return
+  end
+
   def create
     if tags_params.present?
         tags_params.each do |item|
