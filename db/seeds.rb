@@ -51,13 +51,20 @@ h3 = {name: "やおちゅう",
       maximum_acceptability: 5,
       tags_attributes: [
         {
-          tag: "食"
+          tag: "食",
+          host_detail_id: 3
         },
         {
-          tag: "まちぶら"
+          tag: "さとぶら",
+          host_detail_id: 3
         },
         {
-          tag: "当日までに予約"
+          tag: "まちぶら",
+          host_detail_id: 3
+        },
+        {
+          tag: "当日までに予約",
+          host_detail_id: 3
         }
       ]
     }
@@ -76,24 +83,29 @@ h4 = {name: "遠野醸造TAPROOM",
       maximum_acceptability: 5,
       tags_attributes: [
         {
-          tag: "食"
+          tag: "食",
+          host_detail_id: 4
         },
         {
-          tag: "体験"
+          tag: "体験",
+          host_detail_id: 4
         },
         {
-          tag: "クラフトビール"
+          tag: "クラフトビール",
+          host_detail_id: 4
         },
         {
-          tag: "まちぶら"
+          tag: "まちぶら",
+          host_detail_id: 4
         },
         {
-          tag: "当日までに予約"
+          tag: "当日までに予約",
+          host_detail_id: 4
         }
       ]
     }
 
-h5 = {name: "しゃむねこ亭",
+    h5 = {name: "しゃむねこ亭",
       latitude: "39.32082344250657",
       longitude: "141.44578785373437",
       acceptable_date: "",
@@ -107,19 +119,29 @@ h5 = {name: "しゃむねこ亭",
       maximum_acceptability: "",
       tags_attributes: [
         {
-          tag: "食"
+          tag: "食",
+          host_detail_id: 5
         },
         {
-          tag: "カフェ"
+          tag: "体験",
+          host_detail_id: 5
         },
         {
-          tag: "さとぶら"
+          tag: "クラフトビール",
+          host_detail_id: 5
         },
         {
-          tag: "当日までに予約"
+          tag: "まちぶら",
+          host_detail_id: 5
+        },
+        {
+          tag: "当日までに予約",
+          host_detail_id: 5
         }
       ]
     }
+
+
 
 # HostDetail.create!(name: "福地わさび縁",
 #   latitude: "",
@@ -160,13 +182,16 @@ h6 = {name: "詩季",
       maximum_acceptability: 8,
       tags_attributes: [
         {
-          tag: "カフェ"
+          tag: "カフェ",
+          host_detail_id: 6
         },
         {
-          tag: "まちぶら"
+          tag: "まちぶら",
+          host_detail_id: 6
         },
         {
-          tag: "当日までに予約"
+          tag: "当日までに予約",
+          host_detail_id: 6
         }
       ]
     }
@@ -185,13 +210,16 @@ h7 = {name: "Michael's Cafe American",
       maximum_acceptability: 5,
       tags_attributes: [
         {
-          tag: "カフェ"
+          tag: "カフェ",
+          host_detail_id: 7
         },
         {
-          tag: "まちぶら"
+          tag: "まちぶら",
+          host_detail_id: 7
         },
         {
-          tag: "当日までに予約"
+          tag: "当日までに予約",
+          host_detail_id: 7
         }
       ]
     }
@@ -210,13 +238,16 @@ h8 = {name: "遠野物語の館",
       maximum_acceptability: "",
       tags_attributes: [
         {
-          tag: "体験"
+          tag: "体験",
+          host_detail_id: 8
         },
         {
-          tag: "まちぶら"
+          tag: "まちぶら",
+          host_detail_id: 8
         },
         {
-          tag: "当日までに予約"
+          tag: "当日までに予約",
+          host_detail_id: 8
         }
       ]
     }
@@ -235,13 +266,16 @@ h9 = {name: "多田金",
       maximum_acceptability: 5,
       tags_attributes: [
         {
-          tag: "体験"
+          tag: "体験",
+          host_detail_id: 9
         },
         {
-          tag: "まちぶら"
+          tag: "まちぶら",
+          host_detail_id: 9
         },
         {
-          tag: "当日までに予約"
+          tag: "当日までに予約",
+          host_detail_id: 9
         }
       ]
     }
@@ -260,13 +294,16 @@ h10 = {name: "加藤仏具店",
         maximum_acceptability: 5,
         tags_attributes: [
           {
-            tag: "体験"
+            tag: "体験",
+            host_detail_id: 10
           },
           {
-            tag: "まちぶら"
+            tag: "まちぶら",
+            host_detail_id: 10
           },
           {
-            tag: "当日までに予約"
+            tag: "当日までに予約",
+            host_detail_id: 10
           }
         ]
       }
@@ -285,13 +322,16 @@ h11 = {name: "宇迦神社",
         maximum_acceptability: 10,
         tags_attributes: [
           {
-            tag: "体験"
+            tag: "体験",
+            host_detail_id: 11
           },
           {
-            tag: "まちぶら"
+            tag: "まちぶら",
+            host_detail_id: 11
           },
           {
-            tag: "1週間前までに予約"
+            tag: "1週間前までに予約",
+            host_detail_id: 11
           }
         ]
       }
@@ -310,16 +350,20 @@ h12 = {name: "お食事処  伊藤家",
         maximum_acceptability: 5,
         tags_attributes: [
           {
-            tag: "食"
+            tag: "食",
+            host_detail_id: 12
           },
           {
-            tag: "体験"
+            tag: "体験",
+            host_detail_id: 12
           },
           {
-            tag: "まちぶら"
+            tag: "まちぶら",
+            host_detail_id: 12
           },
           {
-            tag: "当日までに予約"
+            tag: "当日までに予約",
+            host_detail_id: 12
           }
         ]
       }
@@ -338,13 +382,16 @@ h13 = {name: "小林荒物雑貨店",
         maximum_acceptability: 6,
         tags_attributes: [
           {
-            tag: "体験"
+            tag: "体験",
+            host_detail_id: 13
           },
           {
-            tag: "まちぶら"
+            tag: "まちぶら",
+            host_detail_id: 13
           },
           {
-            tag: "1週間前までに予約"
+            tag: "1週間前までに予約",
+            host_detail_id: 13
           }
         ]
       }
@@ -363,16 +410,20 @@ h14 = {name: "マヨイガの郷",
         maximum_acceptability: 5,
         tags_attributes: [
           {
-            tag: "体験"
+            tag: "体験",
+            host_detail_id: 14
           },
           {
-            tag: "まちぶら"
+            tag: "まちぶら",
+            host_detail_id: 14
           },
           {
-            tag: "カッパ"
+            tag: "カッパ",
+            host_detail_id: 14
           },
           {
-            tag: "当日までに予約"
+            tag: "当日までに予約",
+            host_detail_id: 14
           }
         ]
       }
@@ -391,16 +442,20 @@ h15 = {name: "遠野市立博物館",
         maximum_acceptability: "",
         tags_attributes: [
           {
-            tag: "カッパ"
+            tag: "カッパ",
+            host_detail_id: 15
           },
           {
-            tag: "体験"
+            tag: "体験",
+            host_detail_id: 15
           },
           {
-            tag: "まちぶら"
+            tag: "まちぶら",
+            host_detail_id: 15
           },
           {
-            tag: "当日までに予約"
+            tag: "当日までに予約",
+            host_detail_id: 15
           }
         ]
       }
@@ -419,13 +474,16 @@ h16 = {name: "善明寺",
         maximum_acceptability: 10,
         tags_attributes: [
           {
-            tag: "体験"
+            tag: "体験",
+            host_detail_id: 16
           },
           {
-            tag: "まちぶら"
+            tag: "まちぶら",
+            host_detail_id: 16
           },
           {
-            tag: "1週間前までに予約"
+            tag: "1週間前までに予約",
+            host_detail_id: 16
           }
         ]
       }
@@ -444,13 +502,16 @@ h17 = {name: "千葉家具店",
         maximum_acceptability: 8,
         tags_attributes: [
           {
-            tag: "体験"
+            tag: "体験",
+            host_detail_id: 17
           },
           {
-            tag: "まちぶら"
+            tag: "まちぶら",
+            host_detail_id: 17
           },
           {
-            tag: "当日までに予約"
+            tag: "当日までに予約",
+            host_detail_id: 17
           }
         ]
       }
@@ -469,16 +530,20 @@ h18 = {name: "アクセサリー＆Café 詩季",
         maximum_acceptability: 5,
         tags_attributes: [
           {
-            tag: "食"
+            tag: "食",
+            host_detail_id: 18
           },
           {
-            tag: "体験"
+            tag: "体験",
+            host_detail_id: 18
           },
           {
-            tag: "まちぶら"
+            tag: "まちぶら",
+            host_detail_id: 18
           },
           {
-            tag: "当日までに予約"
+            tag: "当日までに予約",
+            host_detail_id: 18
           }
         ]
       }
@@ -497,13 +562,16 @@ h19 = {name: "松田種苗店",
         maximum_acceptability: 10,
         tags_attributes: [
           {
-            tag: "体験"
+            tag: "体験",
+            host_detail_id: 19
           },
           {
-            tag: "まちぶら"
+            tag: "まちぶら",
+            host_detail_id: 19
           },
           {
-            tag: "1週間前までに予約"
+            tag: "1週間前までに予約",
+            host_detail_id: 19
           }
         ]
       }
@@ -522,16 +590,20 @@ h20 = {name: "竹林堂",
         maximum_acceptability: 5,
         tags_attributes: [
           {
-            tag: "食"
+            tag: "食",
+            host_detail_id: 20
           },
           {
-            tag: "体験"
+            tag: "体験",
+            host_detail_id: 20
           },
           {
-            tag: "まちぶら"
+            tag: "まちぶら",
+            host_detail_id: 20
           },
           {
-            tag: "当日までに予約"
+            tag: "当日までに予約",
+            host_detail_id: 20
           }
         ]
     }
@@ -550,16 +622,20 @@ h21 = {name: "新里豆腐店",
         maximum_acceptability: 5,
         tags_attributes: [
           {
-            tag: "食"
+            tag: "食",
+            host_detail_id: 21
           },
           {
-            tag: "体験"
+            tag: "体験",
+            host_detail_id: 21
           },
           {
-            tag: "まちぶら"
+            tag: "まちぶら",
+            host_detail_id: 21
           },
           {
-            tag: "当日までに予約"
+            tag: "当日までに予約",
+            host_detail_id: 21
           }
         ]
       }
@@ -579,16 +655,20 @@ h22 = {name: "まつだ松林堂",
         maximum_acceptability: 5,
         tags_attributes: [
           {
-            tag: "食"
+            tag: "食",
+            host_detail_id: 22
           },
           {
-            tag: "体験"
+            tag: "体験",
+            host_detail_id: 22
           },
           {
-            tag: "まちぶら"
+            tag: "まちぶら",
+            host_detail_id: 22
           },
           {
-            tag: "当日までに予約"
+            tag: "当日までに予約",
+            host_detail_id: 22
           }
         ]
       }
@@ -607,16 +687,20 @@ h23 = {name: "くすりの奥寺",
         maximum_acceptability: 8,
         tags_attributes: [
           {
-            tag: "カッパ"
+            tag: "カッパ",
+            host_detail_id: 23
           },
           {
-            tag: "体験"
+            tag: "体験",
+            host_detail_id: 23
           },
           {
-            tag: "まちぶら"
+            tag: "まちぶら",
+            host_detail_id: 23
           },
           {
-            tag: "1週間前までに予約"
+            tag: "1週間前までに予約",
+            host_detail_id: 23
           }
         ]
       }
@@ -635,13 +719,16 @@ h24 = {name: "須藤写真舘",
         maximum_acceptability: 5,
         tags_attributes: [
           {
-            tag: "体験"
+            tag: "体験",
+            host_detail_id: 24
           },
           {
-            tag: "まちぶら"
+            tag: "まちぶら",
+            host_detail_id: 24
           },
           {
-            tag: "1週間前までに予約"
+            tag: "1週間前までに予約",
+            host_detail_id: 24
           }
         ]
       }
@@ -660,19 +747,24 @@ h25 = {name: "鶴乃屋菓子店",
         maximum_acceptability: 5,
         tags_attributes: [
           {
-            tag: "カッパ"
+            tag: "カッパ",
+            host_detail_id: 25
           },
           {
-            tag: "食"
+            tag: "食",
+            host_detail_id: 25
           },
           {
-            tag: "体験"
+            tag: "体験",
+            host_detail_id: 25
           },
           {
-            tag: "まちぶら"
+            tag: "まちぶら",
+            host_detail_id: 25
           },
           {
-            tag: "当日までに予約"
+            tag: "当日までに予約",
+            host_detail_id: 25
           }
         ]
       }
@@ -691,13 +783,16 @@ h26 = {name: "リラクゼーションスペース felice",
         maximum_acceptability: 3,
         tags_attributes: [
           {
-            tag: "体験"
+            tag: "体験",
+            host_detail_id: 26
           },
           {
-            tag: "まちぶら"
+            tag: "まちぶら",
+            host_detail_id: 26
           },
           {
-            tag: "当日までに予約"
+            tag: "当日までに予約",
+            host_detail_id: 26
           }
         ]
       }
@@ -716,13 +811,16 @@ h27 = {name: "笑いヨガ 伊藤家",
         maximum_acceptability: 10,
         tags_attributes: [
           {
-            tag: "体験"
+            tag: "体験",
+            host_detail_id: 27
           },
           {
-            tag: "まちぶら"
+            tag: "まちぶら",
+            host_detail_id: 27
           },
           {
-            tag: "当日までに予約"
+            tag: "当日までに予約",
+            host_detail_id: 27
           }
         ]
       }
@@ -741,13 +839,16 @@ h28 = {name: "hair salon Oggi",
         maximum_acceptability: 3,
         tags_attributes: [
           {
-            tag: "体験"
+            tag: "体験",
+            host_detail_id: 28
           },
           {
-            tag: "まちぶら"
+            tag: "まちぶら",
+            host_detail_id: 28
           },
           {
-            tag: "1週間前までに予約"
+            tag: "1週間前までに予約",
+            host_detail_id: 28
           }
         ]
       }
@@ -766,13 +867,16 @@ h29 = {name: "松田酒店",
         maximum_acceptability: 5,
         tags_attributes: [
           {
-            tag: "体験"
+            tag: "体験",
+            host_detail_id: 29
           },
           {
-            tag: "まちぶら"
+            tag: "まちぶら",
+            host_detail_id: 29
           },
           {
-            tag: "当日までに予約"
+            tag: "当日までに予約",
+            host_detail_id: 29
           }
         ]
       }
@@ -791,13 +895,16 @@ h30 = {name: "馬に会いに行く 青山さん家",
         maximum_acceptability: 5,
         tags_attributes: [
           {
-            tag: "馬"
+            tag: "馬",
+            host_detail_id: 30
           },
           {
-            tag: "体験"
+            tag: "体験",
+            host_detail_id: 30
           },
           {
-            tag: "さとぶら"
+            tag: "さとぶら",
+            host_detail_id: 30
           }
         ]
       }
@@ -816,16 +923,20 @@ h31 = {name: "郷土菓子けいらん作り 農家民宿 素づくり亭",
         maximum_acceptability: "",
         tags_attributes: [
           {
-            tag: "食"
+            tag: "食",
+            host_detail_id: 31
           },
           {
-            tag: "体験"
+            tag: "体験",
+            host_detail_id: 31
           },
           {
-            tag: "さとぶら"
+            tag: "さとぶら",
+            host_detail_id: 31
           },
           {
-            tag: "宿泊"
+            tag: "宿泊",
+            host_detail_id: 31
           }
         ]
       }
