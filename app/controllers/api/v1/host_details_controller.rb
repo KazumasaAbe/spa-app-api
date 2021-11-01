@@ -1,14 +1,10 @@
 class Api::V1::HostDetailsController < ApplicationController
-  before_action :set_host_detail, only: [:show, :update, :destroy]
+  before_action :set_host_detail, only: [:update, :destroy, :update_acceptable]
 
   def index
     host_details = HostDetail.includes(:tags)
     host_details_tags = host_details.map.to_json(include: :tags)
     render json: host_details_tags
-  end
-
-  def show
-    render json: @host_detail
   end
 
   def create
@@ -35,7 +31,6 @@ class Api::V1::HostDetailsController < ApplicationController
   end
 
   def update_acceptable
-    @host_detail = HostDetail.find_by(id: params[:id])
     if @host_detail.update(acceptable_params)
       render json: {status: 200}
     else
