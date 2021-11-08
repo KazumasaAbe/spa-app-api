@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :tag do
     tag { "MyString" }
-    hostDetail { nil }
+    host_detail_id { 2 }
   end
 end

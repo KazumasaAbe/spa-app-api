@@ -16,11 +16,7 @@ RSpec.describe Tag, type: :model do
   end
 
   it "タグモデルのタグ、外部キー（host_detail_id）があれば有効" do
-    tag = @hostDetail.tags.build(
-      tag: "食",
-      host_detail_id: nil
-      )
-    expect(tag).to be_valid
+    expect(@tag).to be_valid
   end
 
   describe 'バリデーションのテスト' do
